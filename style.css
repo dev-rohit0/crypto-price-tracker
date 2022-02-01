@@ -27,7 +27,7 @@ body{
     place-items: center;
     font-family: 'Comforter', cursive;
     font-size: 80px;
-    border-bottom: coral;
+    
 }
 .crypto{
     grid-area: crypto;
@@ -45,4 +45,8 @@ body{
     height: 50px ;
     cursor: default;
 }
-
+@media screen and (max-width: 360px) {
+    .name {
+      font-size: 30px;
+    }
+}

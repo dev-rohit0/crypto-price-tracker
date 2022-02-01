@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: bold;
+}
+
+img{
+    width: 20px;
+    height: 20px;
+}
+
+body{
+    background: #f8f8f8;
+}
+.container{
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "name name"
+    "crypto cryptoPrice";
+}
+.name{
+    grid-area: name;
+    display: grid;
+    place-items: center;
+    font-family: 'Comforter', cursive;
+    font-size: 80px;
+    border-bottom: coral;
+}
+.crypto{
+    grid-area: crypto;
+    text-align: center;
+    
+}
+.cryptoPrice{
+    grid-area: cryptoPrice;
+    text-align: center;
+}
+.bitcoin,.ethereum,.solana,.dogecoin,.aave,.helium,.polkadot,.cardano,.enjin,.binance,.decentraland,.chainlink,.fantom,.ripple,.uniswap,.tether,.maker{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px ;
+    cursor: default;
+}
+

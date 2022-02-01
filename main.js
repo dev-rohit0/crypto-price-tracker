@@ -1,20 +1,20 @@
-
-                
+CheckPrice(); 
+setInterval(CheckPrice,60000);        
 function CheckPrice() {
                     
                     
-    fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcvs_currencies=usd')
-    .then(response => response.json())
-    .then(data => {
-        BTC.innerHTML = "$"+(data['bitcoin']['usd']).toLocaleString();
-        console.log(data['bitcoin']['usd']);
+fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd')
+.then(response => response.json())
+.then(data => {
+    BTC.innerHTML = "$"+(data['bitcoin']['usd']).toLocaleString();
+    console.log(data['bitcoin']['usd']);
                         
-    });
+});
                     
-    fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethervs_currencies=usd')
-    .then(response => response.json())
-    .then(data => {
-        ETH.innerHTML = "$"+(data['ethereum']['usd']).toLocaleString();
+fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd')
+.then(response => response.json())
+.then(data => {
+    ETH.innerHTML = "$"+(data['ethereum']['usd']).toLocaleString();
     console.log(data['ethereum']['usd']);
     
 });
@@ -138,5 +138,4 @@ fetch('https://api.coingecko.com/api/v3/simple/price?ids=maker&vs_currencies=usd
 });
 
 }
-CheckPrice();
-setInterval(CheckPrice,60000);
+
